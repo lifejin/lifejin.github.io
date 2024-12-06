@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+	<title>초대장</title>
+	<style>
+		body {
+			font-family: 'Arial', sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f9f9f9;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		.invitation {
+			background-color: white;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+			padding: 20px;
+			max-width: 600px;
+			text-align: center;
+		}
+		.invitation img {
+			max-width: 100%;
+			border-radius: 10px;
+		}
+		.invitation h1 {
+			color: #333;
+		}
+		.invitation p {
+			color: #555;
+			line-height: 1.6;
+		}
+		.invitation button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.invitation button:hover {
+			background-color: #45a049;
+		}
+	</style>
 </head>
 <body>
-  <p>Hello, World!</p>
+<div class="invitation">
+	<img src="images/main.jpg" alt="초대 이미지">
+	<h1>진생이네 집들이 함께해요!</h1>
+	<p>
+		안녕하세요! 진생이네 집에서 집들이를 할 예정입니다.<br>
+		일시: 2024년 12월 14일 오후 6시<br>
+		장소: 경기 남양주시 송산로307번길 22. 5201동 1004호<br>
+
+		준비물: 녹음기, 수첩, 필기구<br>
+		즐거운 시간 함께 보내요!
+	</p>
+
+	<!-- * 카카오맵 - 지도퍼가기 -->
+	<!-- 1. 지도 노드 -->
+	<div id="daumRoughmapContainer1733472097311" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+	<!--
+        2. 설치 스크립트
+        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+    -->
+	<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+	<!-- 3. 실행 스크립트 -->
+	<script charset="UTF-8">
+		new daum.roughmap.Lander({
+			"timestamp" : "1733472097311",
+			"key" : "2mfu7",
+			"mapWidth" : "640",
+			"mapHeight" : "360"
+		}).render();
+	</script>
+	<button onclick="alert('참석 여부를 알려주세요!')">참석하기</button>
+</div>
 </body>
 </html>
